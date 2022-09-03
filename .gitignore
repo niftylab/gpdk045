@@ -1,0 +1,7 @@
+.idea
+*.pyc
+*~
+*cdslck*
+.ipynb_checkpoints
+*__pycache__*
+
