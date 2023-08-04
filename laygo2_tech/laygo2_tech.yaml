@@ -1624,6 +1624,46 @@ templates:
         - 0
       - - 410
         - 1000
+    ntap_fast_center_nf2_v2:
+      pins:
+        TAP0:
+          layer:
+          - Metal1
+          - label
+          netname: TAP0
+          xy:
+          - - -40
+            - 235
+          - - 40
+            - 595
+        TAP1:
+          layer:
+          - Metal1
+          - label
+          netname: TAP1
+          xy:
+          - - 165
+            - 235
+          - - 245
+            - 595
+        TAP2:
+          layer:
+          - Metal1
+          - label
+          netname: TAP2
+          xy:
+          - - 370
+            - 235
+          - - 450
+            - 595
+      unit_size:
+      - 410
+      - 1000
+      xy:
+      - - 0
+        - 0
+      - - 410
+        - 1000
     ntap_fast_left:
       pins: {}
       unit_size:
@@ -2065,6 +2105,46 @@ templates:
       - - 205
         - 1000
     ptap_fast_center_nf2:
+      pins:
+        TAP0:
+          layer:
+          - Metal1
+          - label
+          netname: TAP0
+          xy:
+          - - -40
+            - 235
+          - - 40
+            - 595
+        TAP1:
+          layer:
+          - Metal1
+          - label
+          netname: TAP1
+          xy:
+          - - 165
+            - 235
+          - - 245
+            - 595
+        TAP2:
+          layer:
+          - Metal1
+          - label
+          netname: TAP2
+          xy:
+          - - 370
+            - 235
+          - - 450
+            - 595
+      unit_size:
+      - 410
+      - 1000
+      xy:
+      - - 0
+        - 0
+      - - 410
+        - 1000
+    ptap_fast_center_nf2_v2:
       pins:
         TAP0:
           layer:
