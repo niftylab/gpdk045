@@ -22,12 +22,17 @@
 #
 ########################################################################################################################
 
-"""LAYGO2 setup for tsmcN45"""
-from .laygo2_tech_templates import load_templates
-from .laygo2_tech_grids import load_grids
-from .laygo2_tech_templates import generate_gbnd
-from .laygo2_tech_templates import generate_tap
-from .laygo2_tech_templates import generate_pwr_rail
-from .laygo2_tech_templates import fill_by_instance
-from .laygo2_tech_templates import extend_wire
+"""Laygo2 technology setup in Niftylab's style"""
+import yaml
+#import laygo2
+#from .laygo2_tech_templates import load_templates
+#from .laygo2_tech_grids import load_grids
+#from .laygo2_tech_templates import generate_gbnd
+#from .laygo2_tech_templates import generate_tap
+#from .laygo2_tech_templates import generate_pwr_rail
+#from .laygo2_tech_templates import fill_by_instance
+#from .laygo2_tech_templates import extend_wire
+from .core import *
+
 name = 'gpdk045'
+
