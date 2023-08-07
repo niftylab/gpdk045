@@ -23,8 +23,6 @@
 ########################################################################################################################
 
 """Laygo2 technology setup in Niftylab's style"""
-import yaml
-#import laygo2
 #from .laygo2_tech_templates import load_templates
 #from .laygo2_tech_grids import load_grids
 #from .laygo2_tech_templates import generate_gbnd
