@@ -30,7 +30,7 @@ grids:
           - pin
         scope:
         - 0
-        - 150
+        - 200
         width:
         - 80
         ycolor:
@@ -384,7 +384,7 @@ grids:
           - pin
         scope:
         - 0
-        - 150
+        - 200
         width:
         - 80
         ycolor:
@@ -1003,22 +1003,15 @@ grids:
     routing_23_thick_basic:
       horizontal:
         elements:
-        - 260
-        - 740
+        - 0
         extension:
         - 120
-        - 120
         extension0:
-        - 480
         - 480
         layer:
         - - Metal2
           - drawing
-        - - Metal2
-          - drawing
         pin_layer:
-        - - Metal2
-          - pin
         - - Metal2
           - pin
         scope:
@@ -1026,9 +1019,7 @@ grids:
         - 1000
         width:
         - 240
-        - 240
         ycolor:
-        - not MPT
         - not MPT
       primary_grid: horizontal
       type: routing
@@ -1072,7 +1063,7 @@ grids:
           - pin
         scope:
         - 0
-        - 150
+        - 200
         width:
         - 80
         ycolor:
@@ -1102,6 +1093,330 @@ grids:
       via:
         map:
         - - via_M3_M4_0
+    routing_34_basic_thick:
+      horizontal:
+        elements:
+        - 0
+        extension:
+        - 120
+        extension0:
+        - 480
+        layer:
+        - - Metal4
+          - drawing
+        pin_layer:
+        - - Metal4
+          - pin
+        scope:
+        - 0
+        - 1000
+        width:
+        - 240
+        ycolor:
+        - not MPT
+      primary_grid: horizontal
+      type: routing
+      vertical:
+        elements:
+        - 0
+        extension:
+        - 40
+        extension0:
+        - 160
+        layer:
+        - - Metal3
+          - drawing
+        pin_layer:
+        - - Metal3
+          - pin
+        scope:
+        - 0
+        - 205
+        width:
+        - 80
+        xcolor:
+        - not MPT
+      via:
+        map:
+        - - via_M3_M4_1
+          - via_M3_M4_1
+    routing_34_thick_basic:
+      horizontal:
+        elements:
+        - 0
+        extension:
+        - 120
+        extension0:
+        - 480
+        layer:
+        - - Metal4
+          - drawing
+        pin_layer:
+        - - Metal4
+          - pin
+        scope:
+        - 0
+        - 200
+        width:
+        - 80
+        ycolor:
+        - not MPT
+      primary_grid: horizontal
+      type: routing
+      vertical:
+        elements:
+        - 0
+        extension:
+        - 40
+        extension0:
+        - 160
+        layer:
+        - - Metal3
+          - drawing
+        pin_layer:
+        - - Metal3
+          - pin
+        scope:
+        - 0
+        - 410
+        width:
+        - 240
+        xcolor:
+        - not MPT
+      via:
+        map:
+        - - via_M3_M4_2
+    routing_34_thick:
+      horizontal:
+        elements:
+        - 0
+        extension:
+        - 120
+        extension0:
+        - 480
+        layer:
+        - - Metal4
+          - drawing
+        pin_layer:
+        - - Metal4
+          - pin
+        scope:
+        - 0
+        - 1000
+        width:
+        - 240
+        ycolor:
+        - not MPT
+      primary_grid: horizontal
+      type: routing
+      vertical:
+        elements:
+        - 0
+        extension:
+        - 120
+        extension0:
+        - 480
+        layer:
+        - - Metal3
+          - drawing
+        pin_layer:
+        - - Metal3
+          - pin
+        scope:
+        - 0
+        - 410
+        width:
+        - 240
+        xcolor:
+        - not MPT
+      via:
+        map:
+        - - via_M3_M4_1
+    routing_45_basic:
+      horizontal:
+        elements:
+        - 0
+        extension:
+        - 40
+        extension0:
+        - 160
+        layer:
+        - - Metal4
+          - drawing
+        pin_layer:
+        - - Metal4
+          - pin
+        scope:
+        - 0
+        - 200
+        width:
+        - 80
+        ycolor:
+        - not MPT
+      primary_grid: horizontal
+      type: routing
+      vertical:
+        elements:
+        - 0
+        extension:
+        - 40
+        extension0:
+        - 160
+        layer:
+        - - Metal5
+          - drawing
+        pin_layer:
+        - - Metal5
+          - pin
+        scope:
+        - 0
+        - 205
+        width:
+        - 80
+        xcolor:
+        - not MPT
+      via:
+        map:
+        - - via_M4_M5_0
+    routing_45_thick_basic:
+      horizontal:
+        elements:
+        - 0
+        extension:
+        - 120
+        extension0:
+        - 480
+        layer:
+        - - Metal4
+          - drawing
+        pin_layer:
+        - - Metal4
+          - pin
+        scope:
+        - 0
+        - 1000
+        width:
+        - 240
+        ycolor:
+        - not MPT
+      primary_grid: horizontal
+      type: routing
+      vertical:
+        elements:
+        - 0
+        extension:
+        - 40
+        extension0:
+        - 160
+        layer:
+        - - Metal5
+          - drawing
+        pin_layer:
+        - - Metal5
+          - pin
+        scope:
+        - 0
+        - 205
+        width:
+        - 80
+        xcolor:
+        - not MPT
+      via:
+        map:
+        - - via_M4_M5_1
+          - via_M4_M5_1
+    routing_45_basic_thick:
+      horizontal:
+        elements:
+        - 0
+        extension:
+        - 120
+        extension0:
+        - 480
+        layer:
+        - - Metal4
+          - drawing
+        pin_layer:
+        - - Metal4
+          - pin
+        scope:
+        - 0
+        - 200
+        width:
+        - 80
+        ycolor:
+        - not MPT
+      primary_grid: horizontal
+      type: routing
+      vertical:
+        elements:
+        - 0
+        extension:
+        - 40
+        extension0:
+        - 160
+        layer:
+        - - Metal5
+          - drawing
+        pin_layer:
+        - - Metal5
+          - pin
+        scope:
+        - 0
+        - 410
+        width:
+        - 240
+        xcolor:
+        - not MPT
+      via:
+        map:
+        - - via_M4_M5_2
+    routing_45_thick:
+      horizontal:
+        elements:
+        - 0
+        extension:
+        - 120
+        extension0:
+        - 480
+        layer:
+        - - Metal4
+          - drawing
+        pin_layer:
+        - - Metal4
+          - pin
+        scope:
+        - 0
+        - 1000
+        width:
+        - 240
+        ycolor:
+        - not MPT
+      primary_grid: horizontal
+      type: routing
+      vertical:
+        elements:
+        - 0
+        extension:
+        - 120
+        extension0:
+        - 480
+        layer:
+        - - Metal5
+          - drawing
+        pin_layer:
+        - - Metal5
+          - pin
+        scope:
+        - 0
+        - 410
+        width:
+        - 240
+        xcolor:
+        - not MPT
+      via:
+        map:
+        - - via_M4_M5_1
 templates:
   gpdk045_microtemplates_dense:
     _gate_base_nf1_left:
@@ -2280,6 +2595,51 @@ templates:
       - - 0
         - 0
     via_M3_M4_0:
+      unit_size:
+      - 0
+      - 0
+      xy:
+      - - 0
+        - 0
+      - - 0
+        - 0
+    via_M3_M4_1:
+      unit_size:
+      - 0
+      - 0
+      xy:
+      - - 0
+        - 0
+      - - 0
+        - 0
+    via_M3_M4_2:
+      unit_size:
+      - 0
+      - 0
+      xy:
+      - - 0
+        - 0
+      - - 0
+        - 0
+    via_M4_M5_0:
+      unit_size:
+      - 0
+      - 0
+      xy:
+      - - 0
+        - 0
+      - - 0
+        - 0
+    via_M4_M5_1:
+      unit_size:
+      - 0
+      - 0
+      xy:
+      - - 0
+        - 0
+      - - 0
+        - 0
+    via_M4_M5_2:
       unit_size:
       - 0
       - 0
