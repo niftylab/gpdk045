@@ -1499,6 +1499,66 @@ templates:
         - 0
       - - 205
         - 1000
+    boundary_bottom:
+      pins: {}
+      unit_size:
+      - 205
+      - 1000
+      xy:
+      - - 0
+        - 0
+      - - 205
+        - 1000
+    boundary_bottomleft:
+      pins: {}
+      unit_size:
+      - 410
+      - 1000
+      xy:
+      - - 0
+        - 0
+      - - 410
+        - 1000
+    boundary_bottomright:
+      pins: {}
+      unit_size:
+      - 410
+      - 1000
+      xy:
+      - - 0
+        - 0
+      - - 410
+        - 1000
+    boundary_top:
+      pins: {}
+      unit_size:
+      - 205
+      - 1000
+      xy:
+      - - 0
+        - 0
+      - - 205
+        - 1000
+    boundary_topleft:
+      pins: {}
+      unit_size:
+      - 410
+      - 1000
+      xy:
+      - - 0
+        - 0
+      - - 410
+        - 1000
+    boundary_topright:
+      pins: {}
+      unit_size:
+      - 410
+      - 1000
+      xy:
+      - - 0
+        - 0
+      - - 410
+        - 1000
     momcap_center_1x:
       pins: {}
       unit_size:
