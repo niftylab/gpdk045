@@ -25,6 +25,7 @@
 """Laygo2 technology setup in Niftylab's style"""
 import yaml
 from laygo2.object.technology import NiftyTechnology
+from .flex import load_flex_templates
 
 # Technology parameters
 tech_fname = './laygo2_tech/laygo2_tech.yaml'
@@ -36,7 +37,13 @@ with open(tech_fname, 'r') as stream:
 techobj = NiftyTechnology(tech_params = tech_params)
 
 def load_templates():
-    return techobj.load_tech_templates() 
+    tlib = techobj.load_tech_templates()
+    # return tlib  # uncomment if you are not planning to use flexible templates.
+    # flexible templates. 
+    tlib_flex =load_flex_templates()
+    for tn, t in tlib_flex.items():
+        tlib.append(t)
+    return tlib
 
 def load_grids(templates, libname=None, params=None):
     return techobj.load_tech_grids(templates=templates, libname=libname, params=params)
