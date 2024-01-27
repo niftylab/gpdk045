@@ -16,3 +16,11 @@ mos:
   width_resolution: !!float 5.0e-9
   # the transistor length minimum resolution.
   length_resolution: !!float 5.0e-9
+
+# default parameters of laygo2 generators
+laygo2_generators_private:
+  default_parameters:
+    lch: 45e-9
+    pw: 360e-9
+    nw: 360e-9
+    device_intent: 'fast'
