@@ -1862,12 +1862,12 @@ templates:
     nmos4_fast_space_4x:
       pins: {}
       unit_size:
-      - 840
+      - 820
       - 1000
       xy:
       - - 0
         - 0
-      - - 840
+      - - 820
         - 1000
     nmos4_fast_space_nf2:
       pins: {}
