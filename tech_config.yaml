@@ -24,3 +24,5 @@ laygo2_generators_private:
     pw: 360e-9
     nw: 360e-9
     device_intent: 'fast'
+    rl: 1000e-9
+    rw: 800e-9
