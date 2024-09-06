@@ -2609,6 +2609,25 @@ templates:
         - 0
       - - 820
         - 1000
+    rppoly:
+      pins:
+        MINUS:
+          layer: [Metal2, label]
+          netname: MINUS
+          xy:
+          - [215, 300]
+          - [1015, 380]
+        PLUS:
+          layer: [Metal2, label]
+          netname: PLUS
+          xy:
+          - [215, 1620]
+          - [1015, 1700]
+      rects: {}
+      unit_size: [1230, 2000]
+      xy:
+      - [0, 0]
+      - [1230, 2000]
     via_M1_M2_0:
       unit_size:
       - 0
