@@ -12,7 +12,7 @@ instances:
     instpins: {}
   R0:
     lib_name: gpdk045
-    cell_name: ressppoly_2
+    cell_name: resm1
     instpins:
       MINUS:
         direction: inputOutput

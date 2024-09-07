@@ -863,7 +863,7 @@ grids:
           - pin
         scope:
         - 0
-        - 410
+        - 205
         width:
         - 240
         xcolor:
@@ -2042,22 +2042,22 @@ templates:
     ntap_fast_left:
       pins: {}
       unit_size:
-      - 205
+      - 2050
       - 1000
       xy:
       - - 0
         - 0
-      - - 205
+      - - 2050
         - 1000
     ntap_fast_right:
       pins: {}
       unit_size:
-      - 205
+      - 2050
       - 1000
       xy:
       - - 0
         - 0
-      - - 205
+      - - 2050
         - 1000
     ntap_fast_space:
       pins: {}
@@ -2562,22 +2562,22 @@ templates:
     ptap_fast_left:
       pins: {}
       unit_size:
-      - 205
+      - 2050
       - 1000
       xy:
       - - 0
         - 0
-      - - 205
+      - - 2050
         - 1000
     ptap_fast_right:
       pins: {}
       unit_size:
-      - 205
+      - 2050
       - 1000
       xy:
       - - 0
         - 0
-      - - 205
+      - - 2050
         - 1000
     ptap_fast_space:
       pins: {}
