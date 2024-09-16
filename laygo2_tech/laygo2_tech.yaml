@@ -1,3 +1,10 @@
+export:
+    target: bag
+    bag:
+        scale: !!float 1e-3
+        reset_library: false
+        tech_library: gpdk045
+    mpl:
 grids:
   gpdk045_microtemplates_dense:
     placement_basic:
