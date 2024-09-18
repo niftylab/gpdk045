@@ -1239,6 +1239,238 @@ grids:
       via:
         map:
         - - via_M3_M4_1
+    routing_34_cmos:
+      horizontal:
+        elements:
+        - 0
+        - 340
+        - 490
+        - 790
+        - 1000
+        - 1210
+        - 1510
+        - 1660
+        extension:
+        - 120
+        - 40
+        - 40
+        - 40
+        - 40
+        - 40
+        - 40
+        - 40
+        extension0:
+        - 480
+        - 160
+        - 160
+        - 160
+        - 160
+        - 160
+        - 160
+        - 160
+        layer:
+        - - Metal4
+          - drawing
+        - - Metal4
+          - drawing
+        - - Metal4
+          - drawing
+        - - Metal4
+          - drawing
+        - - Metal4
+          - drawing
+        - - Metal4
+          - drawing
+        - - Metal4
+          - drawing
+        - - Metal4
+          - drawing
+        pin_layer:
+        - - Metal4
+          - pin
+        - - Metal4
+          - pin
+        - - Metal4
+          - pin
+        - - Metal4
+          - pin
+        - - Metal4
+          - pin
+        - - Metal4
+          - pin
+        - - Metal4
+          - pin
+        - - Metal4
+          - pin
+        scope:
+        - 0
+        - 2000
+        width:
+        - 240
+        - 80
+        - 80
+        - 80
+        - 80
+        - 80
+        - 80
+        - 80
+        ycolor:
+        - not MPT
+        - not MPT
+        - not MPT
+        - not MPT
+        - not MPT
+        - not MPT
+        - not MPT
+        - not MPT
+      primary_grid: horizontal
+      type: routing
+      vertical:
+        elements:
+        - 0
+        extension:
+        - 40
+        extension0:
+        - 160
+        layer:
+        - - Metal3
+          - drawing
+        pin_layer:
+        - - Metal3
+          - pin
+        scope:
+        - 0
+        - 205
+        width:
+        - 80
+        xcolor:
+        - not MPT
+      via:
+        map:
+        - - via_M3_M4_1
+          - via_M3_M4_0
+          - via_M3_M4_0
+          - via_M3_M4_0
+          - via_M3_M4_0
+          - via_M3_M4_0
+          - via_M3_M4_0
+          - via_M3_M4_0
+    routing_34_cmos_flipped:
+      horizontal:
+        elements:
+        - 0
+        - 210
+        - 510
+        - 660
+        - 1000
+        - 1340
+        - 1490
+        - 1790
+        extension:
+        - 40
+        - 40
+        - 40
+        - 40
+        - 120
+        - 40
+        - 40
+        - 40
+        extension0:
+        - 160
+        - 160
+        - 160
+        - 160
+        - 480
+        - 160
+        - 160
+        - 160
+        layer:
+        - - Metal4
+          - drawing
+        - - Metal4
+          - drawing
+        - - Metal4
+          - drawing
+        - - Metal4
+          - drawing
+        - - Metal4
+          - drawing
+        - - Metal4
+          - drawing
+        - - Metal4
+          - drawing
+        - - Metal4
+          - drawing
+        pin_layer:
+        - - Metal4
+          - pin
+        - - Metal4
+          - pin
+        - - Metal4
+          - pin
+        - - Metal4
+          - pin
+        - - Metal4
+          - pin
+        - - Metal4
+          - pin
+        - - Metal4
+          - pin
+        - - Metal4
+          - pin
+        scope:
+        - 0
+        - 2000
+        width:
+        - 80
+        - 80
+        - 80
+        - 80
+        - 240
+        - 80
+        - 80
+        - 80
+        ycolor:
+        - not MPT
+        - not MPT
+        - not MPT
+        - not MPT
+        - not MPT
+        - not MPT
+        - not MPT
+        - not MPT
+      primary_grid: horizontal
+      type: routing
+      vertical:
+        elements:
+        - 0
+        extension:
+        - 40
+        extension0:
+        - 160
+        layer:
+        - - Metal3
+          - drawing
+        pin_layer:
+        - - Metal3
+          - pin
+        scope:
+        - 0
+        - 205
+        width:
+        - 80
+        xcolor:
+        - not MPT
+      via:
+        map:
+        - - via_M3_M4_0
+          - via_M3_M4_0
+          - via_M3_M4_0
+          - via_M3_M4_0
+          - via_M3_M4_1
+          - via_M3_M4_0
+          - via_M3_M4_0
+          - via_M3_M4_0
     routing_45_basic:
       horizontal:
         elements:
