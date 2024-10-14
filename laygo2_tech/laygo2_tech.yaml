@@ -1511,6 +1511,82 @@ grids:
           - via_M3_M4_0
           - via_M3_M4_0
           - via_M3_M4_0
+    routing_34_cmos_thick:
+      horizontal:
+        elements:
+        - 0
+        - 500
+        - 1000
+        - 1500
+        extension:
+        - 120
+        - 120
+        - 120
+        - 120
+        extension0:
+        - 480
+        - 480
+        - 480
+        - 480
+        layer:
+        - - Metal4
+          - drawing
+        - - Metal4
+          - drawing
+        - - Metal4
+          - drawing
+        - - Metal4
+          - drawing
+        pin_layer:
+        - - Metal4
+          - pin
+        - - Metal4
+          - pin
+        - - Metal4
+          - pin
+        - - Metal4
+          - pin
+        scope:
+        - 0
+        - 2000
+        width:
+        - 240
+        - 240
+        - 240
+        - 240
+        ycolor:
+        - not MPT
+        - not MPT
+        - not MPT
+        - not MPT
+      primary_grid: horizontal
+      type: routing
+      vertical:
+        elements:
+        - 0
+        extension:
+        - 40
+        extension0:
+        - 160
+        layer:
+        - - Metal3
+          - drawing
+        pin_layer:
+        - - Metal3
+          - pin
+        scope:
+        - 0
+        - 205
+        width:
+        - 80
+        xcolor:
+        - not MPT
+      via:
+        map:
+        - - via_M3_M4_1
+        - - via_M3_M4_1
+        - - via_M3_M4_1
+        - - via_M3_M4_1
     routing_45_basic:
       horizontal:
         elements:
@@ -1968,6 +2044,142 @@ grids:
           - via_M4_M5_0
           - via_M4_M5_0
           - via_M4_M5_0
+    routing_45_cmos_thick:
+      horizontal:
+        elements:
+        - 200
+        - 350
+        - 500
+        - 650
+        - 800
+        - 1200
+        - 1350
+        - 1500
+        - 1650
+        - 1800
+        extension:
+        - 40
+        - 40
+        - 40
+        - 40
+        - 40
+        - 40
+        - 40
+        - 40
+        - 40
+        - 40
+        extension0:
+        - 160
+        - 160
+        - 160
+        - 160
+        - 160
+        - 160
+        - 160
+        - 160
+        - 160
+        - 160
+        layer:
+        - - Metal4
+          - drawing
+        - - Metal4
+          - drawing
+        - - Metal4
+          - drawing
+        - - Metal4
+          - drawing
+        - - Metal4
+          - drawing
+        - - Metal4
+          - drawing
+        - - Metal4
+          - drawing
+        - - Metal4
+          - drawing
+        - - Metal4
+          - drawing
+        - - Metal4
+          - drawing
+        pin_layer:
+        - - Metal4
+          - pin
+        - - Metal4
+          - pin
+        - - Metal4
+          - pin
+        - - Metal4
+          - pin
+        - - Metal4
+          - pin
+        - - Metal4
+          - pin
+        - - Metal4
+          - pin
+        - - Metal4
+          - pin
+        - - Metal4
+          - pin
+        - - Metal4
+          - pin
+        scope:
+        - 0
+        - 2000
+        width:
+        - 80
+        - 80
+        - 80
+        - 80
+        - 80
+        - 80
+        - 80
+        - 80
+        - 80
+        - 80
+        ycolor:
+        - not MPT
+        - not MPT
+        - not MPT
+        - not MPT
+        - not MPT
+        - not MPT
+        - not MPT
+        - not MPT
+        - not MPT
+        - not MPT
+      primary_grid: horizontal
+      type: routing
+      vertical:
+        elements:
+        - 0
+        extension:
+        - 40
+        extension0:
+        - 160
+        layer:
+        - - Metal5
+          - drawing
+        pin_layer:
+        - - Metal5
+          - pin
+        scope:
+        - 0
+        - 410
+        width:
+        - 240
+        xcolor:
+        - not MPT
+      via:
+        map:
+        - - via_M4_M5_2
+          - via_M4_M5_2
+          - via_M4_M5_2
+          - via_M4_M5_2
+          - via_M4_M5_2
+          - via_M4_M5_2
+          - via_M4_M5_2
+          - via_M4_M5_2
+          - via_M4_M5_2
+          - via_M4_M5_2
 templates:
   gpdk045_microtemplates_dense:
     _gate_base_nf1_left:
