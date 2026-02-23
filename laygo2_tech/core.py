@@ -83,10 +83,10 @@ def generate_pwr_mesh(dsn, grid, track=[None, [0]], pitch=[None, None],
                       noindex_to_single_net_pins=True):
     techobj.generate_pwr_mesh(dsn=dsn,
                               grid=grid,
-                              track=track,
-                              pitch=pitch,
+                              track=track.copy(),
+                              pitch=pitch.copy(),
                               assign_netname=assign_netname,
-                              netname=netname,
+                              netname=netname.copy(),
                               generate_pin=generate_pin,
                               pinname_prefix=pinname_prefix,
                               pinname_suffix=pinname_suffix,
@@ -111,15 +111,19 @@ def generate_pwr_rail(dsn, grids, tlib=None, templates=None, route_type='cmos', 
 def extend_wire(dsn, layer='M4', target=500):
     techobj.extend_wire(dsn=dsn, layer=layer, target=target)
 
-def fill_by_instance(dsn, grids, tlib, templates, inst_name:tuple, canvas_area="full", shape=[1,1], iter_type=("R0","MX"), pattern_direction='v', fill_sort='filler'):
+def fill_by_instance(dsn, grids, tlib, templates, inst_name, canvas_area="full", shape=[1,1], iter_type=("R0","MX"), pattern_direction='v', fill_sort='filler'):
+    if isinstance(inst_name, tuple):
+        inst_name = list(inst_name)
+    if isinstance(iter_type, tuple):
+        iter_type = list(iter_type)
     techobj.fill_by_instance(dsn=dsn, 
                              grids=grids, 
                              tlib=tlib, 
                              templates=templates, 
                              inst_name=inst_name,
                              canvas_area=canvas_area,
-                             shape=shape,
-                             iter_type=iter_type,
+                             shape=shape.copy(),
+                             iter_type=iter_type.copy(),
                              pattern_direction=pattern_direction,
                              fill_sort=fill_sort,
                              )
