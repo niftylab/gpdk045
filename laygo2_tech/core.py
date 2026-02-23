@@ -79,7 +79,8 @@ def generate_gbnd(dsn, grids, templates):
 
 def generate_pwr_mesh(dsn, grid, track=[None, [0]], pitch=[None, None], 
                       assign_netname=True, netname=[None, ['VSS', 'VDD']], 
-                      generate_pin=True, pinname_prefix='', pinname_suffix='', pinname_start_index=0):
+                      generate_pin=True, pinname_prefix='', pinname_suffix='', 
+                      noindex_to_single_net_pins=True):
     techobj.generate_pwr_mesh(dsn=dsn,
                               grid=grid,
                               track=track,
@@ -89,7 +90,7 @@ def generate_pwr_mesh(dsn, grid, track=[None, [0]], pitch=[None, None],
                               generate_pin=generate_pin,
                               pinname_prefix=pinname_prefix,
                               pinname_suffix=pinname_suffix,
-                              pinname_start_index=pinname_start_index,
+                              noindex_to_single_net_pins=noindex_to_single_net_pins,
                               )
                           
 def generate_pwr_rail(dsn, grids, tlib=None, templates=None, route_type='cmos', netname=None, vss_name='VSS', vdd_name='VDD', rail_swap=False, vertical=False, pin_num=0, pin_pitch=0):
