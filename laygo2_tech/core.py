@@ -23,17 +23,54 @@
 ########################################################################################################################
 
 """Laygo2 technology setup in Niftylab's style"""
+from pathlib import Path
+
 import yaml
 from laygo2.object.technology import NiftyTechnology
 from .flex import load_flex_templates
 
+LOCAL_CONFIG_KEYS = ("export_template", "import_template", "export")
+
+
+def _load_yaml_mapping(filename):
+    with open(filename, "r") as stream:
+        try:
+            data = yaml.safe_load(stream) or {}
+        except yaml.YAMLError as exc:
+            print(exc)
+            return {}
+    if not isinstance(data, dict):
+        raise ValueError(f"Expected YAML mapping: {filename}")
+    return data
+
+
+def _deep_update(base, overlay):
+    for key, value in overlay.items():
+        if isinstance(base.get(key), dict) and isinstance(value, dict):
+            _deep_update(base[key], value)
+        else:
+            base[key] = value
+    return base
+
+
+def _apply_local_config(tech_params, config_params):
+    for key in LOCAL_CONFIG_KEYS:
+        if key not in config_params:
+            continue
+        value = config_params[key] or {}
+        if isinstance(tech_params.get(key), dict) and isinstance(value, dict):
+            _deep_update(tech_params[key], value)
+        else:
+            tech_params[key] = value
+    return tech_params
+
+
 # Technology parameters
-tech_fname = './laygo2_tech/laygo2_tech.yaml'
-with open(tech_fname, 'r') as stream:
-    try:
-        tech_params = yaml.safe_load(stream)
-    except yaml.YAMLError as exc:
-        print(exc)
+tech_fname = "./laygo2_tech/laygo2_tech.yaml"
+config_fname = "./laygo2_config.yaml"
+tech_params = _load_yaml_mapping(tech_fname)
+if Path(config_fname).exists():
+    tech_params = _apply_local_config(tech_params, _load_yaml_mapping(config_fname))
 techobj = NiftyTechnology(tech_params = tech_params)
 
 def load_templates_and_grids():
