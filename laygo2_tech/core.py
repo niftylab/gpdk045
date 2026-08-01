@@ -129,6 +129,14 @@ def generate_pwr_mesh(dsn, grid, track=[None, [0]], pitch=[None, None],
                               pinname_suffix=pinname_suffix,
                               noindex_to_single_net_pins=noindex_to_single_net_pins,
                               )
+
+
+def extract_pwr_mesh_track(dsn, grid, netname=['VSS', 'VDD']):
+    return techobj.extract_pwr_mesh_track(
+        dsn=dsn,
+        grid=grid,
+        netname=netname.copy(),
+    )
                           
 def generate_pwr_rail(dsn, grids, tlib=None, templates=None, route_type='cmos', netname=None, vss_name='VSS', vdd_name='VDD', rail_swap=False, vertical=False, pin_num=0, pin_pitch=0):
     techobj.generate_pwr_rail(dsn=dsn, 
