@@ -5,7 +5,8 @@ setenv BAG_WORK_DIR `pwd`
 # set BAG framework directory
 setenv BAG_FRAMEWORK "$BAG_WORK_DIR/BAG_framework"
 # set BAG python executable
-setenv BAG_PYTHON "/TOOL/Anaconda/current/bin/python3.7"
+setenv BAG_PYTHON "/home/TOOL/Anaconda/2023.07/bin/python"
+#setenv BAG_PYTHON "/TOOL/Anaconda/current/bin/python3.7"
 # set jupyter notebook path
 setenv BAG_JUPYTER "/TOOL/Anaconda/current/bin/jupyter-notebook"
 # set technology/project configuration directory
