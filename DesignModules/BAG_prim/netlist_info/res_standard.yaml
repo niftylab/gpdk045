@@ -16,12 +16,8 @@ instances:
     instpins: {}
   R0:
     lib_name: gpdk045
-    cell_name: resnsnpoly
+    cell_name: resm1
     instpins:
-      B:
-        direction: input
-        net_name: "BULK"
-        num_bits: 1
       MINUS:
         direction: inputOutput
         net_name: "MINUS"
