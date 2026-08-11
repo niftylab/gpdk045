@@ -2315,6 +2315,36 @@ templates:
         - 0
       - - 410
         - 1000
+    cap_standard:
+      pins:
+        MINUS:
+          layer:
+          - Metal2
+          - pin
+          netname: MINUS
+          xy:
+          - - 155
+            - 300
+          - - 2920
+            - 380
+        PLUS:
+          layer:
+          - Metal2
+          - pin
+          netname: PLUS
+          xy:
+          - - 155
+            - 3620
+          - - 2920
+            - 3700
+      unit_size:
+      - 3075
+      - 4000
+      xy:
+      - - 0
+        - 0
+      - - 3075
+        - 4000
     momcap_center_1x:
       pins: {}
       unit_size:

@@ -1,0 +1,12 @@
+lib_name: BAG_prim
+cell_name: cap_standard
+pins: [ "PLUS", "MINUS" ]
+instances:
+  PIN1:
+    lib_name: basic
+    cell_name: iopin
+    instpins: {}
+  PIN0:
+    lib_name: basic
+    cell_name: iopin
+    instpins: {}

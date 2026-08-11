@@ -114,13 +114,14 @@ def generate_gbnd(dsn, grids, templates):
                           templates=templates,
                           )
 
-def generate_pwr_mesh(dsn, grid, track=[None, [0]], pitch=[None, None], 
-                      assign_netname=True, netname=[None, ['VSS', 'VDD']], 
-                      generate_pin=True, pinname_prefix='', pinname_suffix='', 
+def generate_pwr_mesh(dsn, grid, track=[None, [0]], repeat=True, pitch=[None, None],
+                      assign_netname=True, netname=[None, ['VSS', 'VDD']],
+                      generate_pin=True, pinname_prefix='', pinname_suffix='',
                       noindex_to_single_net_pins=True):
     techobj.generate_pwr_mesh(dsn=dsn,
                               grid=grid,
                               track=track.copy(),
+                              repeat=repeat,
                               pitch=pitch.copy(),
                               assign_netname=assign_netname,
                               netname=netname.copy(),
@@ -131,11 +132,14 @@ def generate_pwr_mesh(dsn, grid, track=[None, [0]], pitch=[None, None],
                               )
 
 
-def extract_pwr_mesh_track(dsn, grid, netname=['VSS', 'VDD']):
+def extract_pwr_mesh_track(dsn, grid, netname=['VSS', 'VDD'],
+                           power_rail_only=False, return_netnames=False):
     return techobj.extract_pwr_mesh_track(
         dsn=dsn,
         grid=grid,
         netname=netname.copy(),
+        power_rail_only=power_rail_only,
+        return_netnames=return_netnames,
     )
                           
 def generate_pwr_rail(dsn, grids, tlib=None, templates=None, route_type='cmos', netname=None, vss_name='VSS', vdd_name='VDD', rail_swap=False, vertical=False, pin_num=0, pin_pitch=0):
