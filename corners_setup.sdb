@@ -18,7 +18,7 @@
 					<model enabled="1">gpdk045.scs
 						<modeltest>All</modeltest>
 						<modelblock>Global</modelblock>
-						<modelfile>/tools/cadence/GPDK/gpdk045_v_6_0/models/spectre/gpdk045.scs</modelfile>
+						<modelfile>$BAG_TECH_CONFIG_DIR/workspace_setup/PDK/models/spectre/gpdk045.scs</modelfile>
 						<modelsection>"tt"</modelsection>
 					</model>
 				</models>
@@ -33,7 +33,7 @@
 					<model enabled="1">gpdk045.scs
 						<modeltest>All</modeltest>
 						<modelblock>Global</modelblock>
-						<modelfile>/tools/cadence/GPDK/gpdk045_v_6_0/models/spectre/gpdk045.scs</modelfile>
+						<modelfile>$BAG_TECH_CONFIG_DIR/workspace_setup/PDK/models/spectre/gpdk045.scs</modelfile>
 						<modelsection>"ff"</modelsection>
 					</model>
 				</models>
@@ -48,7 +48,7 @@
 					<model enabled="1">gpdk045.scs
 						<modeltest>All</modeltest>
 						<modelblock>Global</modelblock>
-						<modelfile>/tools/cadence/GPDK/gpdk045_v_6_0/models/spectre/gpdk045.scs</modelfile>
+						<modelfile>$BAG_TECH_CONFIG_DIR/workspace_setup/PDK/models/spectre/gpdk045.scs</modelfile>
 						<modelsection>"ss"</modelsection>
 					</model>
 				</models>
@@ -63,7 +63,7 @@
 					<model enabled="1">gpdk045.scs
 						<modeltest>All</modeltest>
 						<modelblock>Global</modelblock>
-						<modelfile>/tools/cadence/GPDK/gpdk045_v_6_0/models/spectre/gpdk045.scs</modelfile>
+						<modelfile>$BAG_TECH_CONFIG_DIR/workspace_setup/PDK/models/spectre/gpdk045.scs</modelfile>
 						<modelsection>"sf"</modelsection>
 					</model>
 				</models>
