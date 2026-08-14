@@ -2173,6 +2173,50 @@ grids:
           - via_M4_M5_2
           - via_M4_M5_2
           - via_M4_M5_2
+# Colors for laygo2.export(target='mpl'). laygo2 reads tech_params['export']['mpl'],
+# and laygo2_config.yaml is deep-merged over this key, so its 'target'/'bag' entries
+# do not displace what is defined here.
+#
+# 'order' doubles as the via lookup table: mpl's _via_layer() splits a via cellname
+# such as via_M1_M2_0, finds the 'M1' token in this list, and paints the via with the
+# entry that follows it. gpdk045 names its layers Metal1..Metal5 but its via cells
+# M1..M6, so the metal token and the via color are interleaved below.
+export:
+  mpl:
+    colormap:
+      Metal1: [[0.0, 0.902, 0.902], [0.0, 0.902, 0.902], 0.5]
+      Metal2: [[0.851, 0.8, 0.0], [0.851, 0.8, 0.0], 0.5]
+      Metal3: [[0.149, 0.549, 0.4196], [0.149, 0.549, 0.4196], 0.5]
+      Metal4: [[0.549, 0.549, 0.651], [0.549, 0.549, 0.651], 0.5]
+      Metal5: [[0.7412, 0.8, 0.8], [0.7412, 0.8, 0.8], 0.5]
+      Via1: [[1.0, 1.0, 0.0], [1.0, 1.0, 0.0], 0.5]
+      Via2: [[1.0, 1.0, 0.0], [1.0, 1.0, 0.0], 0.5]
+      Via3: [[0.6, 0.0, 0.902], [0.6, 0.0, 0.902], 0.5]
+      Via4: [[1.0, 1.0, 1.0], [1.0, 1.0, 1.0], 0.5]
+      Via5: [[1.0, 1.0, 0.8], [1.0, 1.0, 0.8], 0.5]
+      __instance__: [black, none, 0.5]
+      __instance_pin__: [grey, none, 0.5]
+      prBoundary: [[0.6, 0.0, 0.902], [0.6, 0.0, 0.902], 0.5]
+    order:
+      - __instance__
+      - __instance_pin__
+      - prBoundary
+      - Metal1
+      - M1
+      - Via1
+      - Metal2
+      - M2
+      - Via2
+      - Metal3
+      - M3
+      - Via3
+      - Metal4
+      - M4
+      - Via4
+      - Metal5
+      - M5
+      - Via5
+    show: false
 templates:
   gpdk045_microtemplates_dense:
     _gate_base_nf1_left:
