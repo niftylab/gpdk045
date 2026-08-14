@@ -1,8 +1,21 @@
 
 printf("STARTING CDSINIT\n")
 
-envSetVal("spectre.envOpts" "modelFiles" 'string strcat(env(PDK_CAD_FILES) "models/spectre/gpdk045.scs;TT"))
-envSetVal("spectre.envOpts" "includePath" 'string strcat(env(PDK_CAD_FILES) "models/spectre"))
+; default spectre model setup for hand-created ADE sessions (BAG flows
+; bind models per testbench and override this).  ICRP job sessions and
+; other non-login shells may not have PDK_CAD_FILES; an unguarded env()
+; lookup then prints two error lines that BAG's _wait_for_results log
+; scan misreads as a fatal ADE error ("ADE session is lost"), so guard.
+let( (pcf)
+    if( (pcf = getShellEnvVar("PDK_CAD_FILES")) then
+        envSetVal("spectre.envOpts" "modelFiles" 'string
+            strcat(pcf "models/spectre/gpdk045.scs;TT"))
+        envSetVal("spectre.envOpts" "includePath" 'string
+            strcat(pcf "models/spectre"))
+    else
+        printf("*Info* PDK_CAD_FILES not set; skipping default spectre model setup.\n")
+    )
+)
 
 
 
@@ -76,6 +89,17 @@ ddsOpenLibManager()
 
 printf("END OF CUSTOM CONFIG SETTINGS\n")
 
-; run BAG server
-load "start_bag.il"
+; run BAG server. ADE-XL/maestro ICRP job sessions (spawned per point by
+; axlRunSimulation, marked by -axlChildIdFlag; they run -interactiveE, so
+; hiGetCIWindow()-style checks cannot filter them) and non-graphical
+; ocean/replay sessions (-nograph) also load this .cdsinit; a BAG server
+; started there overwrites BAG_server_port.txt with a transient port and
+; breaks client connections. system() runs a shell whose $PPID is this
+; virtuoso process, so check its command line (/proc/self would match
+; grep's own argv) and only start the server in the real GUI session.
+if( system("grep -q -e axlChildIdFlag -e nograph /proc/$PPID/cmdline") == 0 then
+    printf("*Info* ICRP child or non-graphical session; skipping BAG server startup.\n")
+else
+    load("start_bag.il")
+)
 
