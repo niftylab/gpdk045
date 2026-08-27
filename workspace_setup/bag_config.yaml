@@ -18,9 +18,11 @@ database:
   # default directory to create generated libraries in.
   default_lib_path: "${BAG_WORK_DIR}/gen_libs"
   # Concrete-CDL policy used by LVCDL schematic-source generation.
-  # BAG_prim bodies follow the OA sources under
-  # gpdk045/DesignModules/BAG_prim/netlist_info (nmos4_fast wraps
-  # gpdk045/nmos1v_lvt, nmos4_standard wraps gpdk045/nmos1v).
+  # BAG_prim bodies follow the si auCdl netlist observed on a passing
+  # LVS run (MM0 D G S B g45n1lvt m=nf l=l w=(w)*1): the device model
+  # names are the g45 sim/LVS names, not the OA cell names.  The OA
+  # sources under gpdk045/DesignModules/BAG_prim/netlist_info fix which
+  # variant each intent wraps (fast/lvt -> 1v_lvt, standard -> 1v svt).
   cdl:
     template_root: ""
     strict: true
@@ -30,27 +32,27 @@ database:
         BAG_prim/nmos4_fast:
           terminals: [B, D, G, S]
           parameters: {l: 45n, w: 360n, nf: 1}
-          body: "MM0 D G S B nmos1v_lvt l=l w=w m=1*nf"
+          body: "MM0 D G S B g45n1lvt l=l w=w m=1*nf"
         BAG_prim/pmos4_fast:
           terminals: [B, D, G, S]
           parameters: {l: 45n, w: 360n, nf: 1}
-          body: "MM0 D G S B pmos1v_lvt l=l w=w m=1*nf"
+          body: "MM0 D G S B g45p1lvt l=l w=w m=1*nf"
         BAG_prim/nmos4_lvt:
           terminals: [B, D, G, S]
           parameters: {l: 45n, w: 360n, nf: 1}
-          body: "MM0 D G S B nmos1v_lvt l=l w=w m=1*nf"
+          body: "MM0 D G S B g45n1lvt l=l w=w m=1*nf"
         BAG_prim/pmos4_lvt:
           terminals: [B, D, G, S]
           parameters: {l: 45n, w: 360n, nf: 1}
-          body: "MM0 D G S B pmos1v_lvt l=l w=w m=1*nf"
+          body: "MM0 D G S B g45p1lvt l=l w=w m=1*nf"
         BAG_prim/nmos4_standard:
           terminals: [B, D, G, S]
           parameters: {l: 45n, w: 360n, nf: 1}
-          body: "MM0 D G S B nmos1v l=l w=w m=1*nf"
+          body: "MM0 D G S B g45n1svt l=l w=w m=1*nf"
         BAG_prim/pmos4_standard:
           terminals: [B, D, G, S]
           parameters: {l: 45n, w: 360n, nf: 1}
-          body: "MM0 D G S B pmos1v l=l w=w m=1*nf"
+          body: "MM0 D G S B g45p1svt l=l w=w m=1*nf"
   # configurations for schematic import and generation
   schematic:
     # technology library to configure new libraries with
