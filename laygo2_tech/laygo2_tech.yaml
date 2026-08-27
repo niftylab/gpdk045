@@ -2173,14 +2173,154 @@ grids:
           - via_M4_M5_2
           - via_M4_M5_2
           - via_M4_M5_2
+    routing_56_basic:
+      horizontal:
+        elements: [0]
+        extension: [40]
+        extension0: [160]
+        layer: [[Metal6, drawing]]
+        pin_layer: [[Metal6, pin]]
+        scope: [0, 200]
+        width: [80]
+        ycolor: [not MPT]
+      primary_grid: horizontal
+      type: routing
+      vertical:
+        elements: [0]
+        extension: [40]
+        extension0: [160]
+        layer: [[Metal5, drawing]]
+        pin_layer: [[Metal5, pin]]
+        scope: [0, 205]
+        width: [80]
+        xcolor: [not MPT]
+      via:
+        map: [[via_M5_M6_0]]
+    routing_56_cmos:
+      horizontal:
+        elements: [200, 350, 500, 650, 800, 1200, 1350, 1500, 1650, 1800]
+        extension: [40, 40, 40, 40, 40, 40, 40, 40, 40, 40]
+        extension0: [160, 160, 160, 160, 160, 160, 160, 160, 160, 160]
+        layer:
+        - [Metal6, drawing]
+        - [Metal6, drawing]
+        - [Metal6, drawing]
+        - [Metal6, drawing]
+        - [Metal6, drawing]
+        - [Metal6, drawing]
+        - [Metal6, drawing]
+        - [Metal6, drawing]
+        - [Metal6, drawing]
+        - [Metal6, drawing]
+        pin_layer:
+        - [Metal6, pin]
+        - [Metal6, pin]
+        - [Metal6, pin]
+        - [Metal6, pin]
+        - [Metal6, pin]
+        - [Metal6, pin]
+        - [Metal6, pin]
+        - [Metal6, pin]
+        - [Metal6, pin]
+        - [Metal6, pin]
+        scope: [0, 2000]
+        width: [80, 80, 80, 80, 80, 80, 80, 80, 80, 80]
+        ycolor: [not MPT, not MPT, not MPT, not MPT, not MPT,
+                 not MPT, not MPT, not MPT, not MPT, not MPT]
+      primary_grid: horizontal
+      type: routing
+      vertical:
+        elements: [0]
+        extension: [40]
+        extension0: [160]
+        layer: [[Metal5, drawing]]
+        pin_layer: [[Metal5, pin]]
+        scope: [0, 205]
+        width: [80]
+        xcolor: [not MPT]
+      via:
+        map:
+        - [via_M5_M6_0, via_M5_M6_0, via_M5_M6_0, via_M5_M6_0,
+           via_M5_M6_0, via_M5_M6_0, via_M5_M6_0, via_M5_M6_0,
+           via_M5_M6_0, via_M5_M6_0]
+    routing_67_basic:
+      horizontal:
+        elements: [0]
+        extension: [40]
+        extension0: [160]
+        layer: [[Metal6, drawing]]
+        pin_layer: [[Metal6, pin]]
+        scope: [0, 200]
+        width: [80]
+        ycolor: [not MPT]
+      primary_grid: horizontal
+      type: routing
+      vertical:
+        elements: [0]
+        extension: [40]
+        extension0: [160]
+        layer: [[Metal7, drawing]]
+        pin_layer: [[Metal7, pin]]
+        scope: [0, 205]
+        width: [80]
+        xcolor: [not MPT]
+      via:
+        map: [[via_M6_M7_0]]
+    routing_67_cmos:
+      horizontal:
+        elements: [200, 350, 500, 650, 800, 1200, 1350, 1500, 1650, 1800]
+        extension: [40, 40, 40, 40, 40, 40, 40, 40, 40, 40]
+        extension0: [160, 160, 160, 160, 160, 160, 160, 160, 160, 160]
+        layer:
+        - [Metal6, drawing]
+        - [Metal6, drawing]
+        - [Metal6, drawing]
+        - [Metal6, drawing]
+        - [Metal6, drawing]
+        - [Metal6, drawing]
+        - [Metal6, drawing]
+        - [Metal6, drawing]
+        - [Metal6, drawing]
+        - [Metal6, drawing]
+        pin_layer:
+        - [Metal6, pin]
+        - [Metal6, pin]
+        - [Metal6, pin]
+        - [Metal6, pin]
+        - [Metal6, pin]
+        - [Metal6, pin]
+        - [Metal6, pin]
+        - [Metal6, pin]
+        - [Metal6, pin]
+        - [Metal6, pin]
+        scope: [0, 2000]
+        width: [80, 80, 80, 80, 80, 80, 80, 80, 80, 80]
+        ycolor: [not MPT, not MPT, not MPT, not MPT, not MPT,
+                 not MPT, not MPT, not MPT, not MPT, not MPT]
+      primary_grid: horizontal
+      type: routing
+      vertical:
+        elements: [0]
+        extension: [40]
+        extension0: [160]
+        layer: [[Metal7, drawing]]
+        pin_layer: [[Metal7, pin]]
+        scope: [0, 205]
+        width: [80]
+        xcolor: [not MPT]
+      via:
+        map:
+        - [via_M6_M7_0, via_M6_M7_0, via_M6_M7_0, via_M6_M7_0,
+           via_M6_M7_0, via_M6_M7_0, via_M6_M7_0, via_M6_M7_0,
+           via_M6_M7_0, via_M6_M7_0]
 # Colors for laygo2.export(target='mpl'). laygo2 reads tech_params['export']['mpl'],
 # and laygo2_config.yaml is deep-merged over this key, so its 'target'/'bag' entries
 # do not displace what is defined here.
 #
 # 'order' doubles as the via lookup table: mpl's _via_layer() splits a via cellname
 # such as via_M1_M2_0, finds the 'M1' token in this list, and paints the via with the
-# entry that follows it. gpdk045 names its layers Metal1..Metal5 but its via cells
-# M1..M6, so the metal token and the via color are interleaved below.
+# entry that follows it. gpdk045 names its layers Metal1..Metal7 but its via cells
+# use M1..M7 tokens, so the metal token and the via color are interleaved below.
 export:
   mpl:
     colormap:
@@ -2189,11 +2329,14 @@ export:
       Metal3: [[0.149, 0.549, 0.4196], [0.149, 0.549, 0.4196], 0.5]
       Metal4: [[0.549, 0.549, 0.651], [0.549, 0.549, 0.651], 0.5]
       Metal5: [[0.7412, 0.8, 0.8], [0.7412, 0.8, 0.8], 0.5]
+      Metal6: [[1.0, 0.902, 0.749], [1.0, 0.902, 0.749], 0.5]
+      Metal7: [[0.0, 1.0, 0.0], [0.0, 1.0, 0.0], 0.5]
       Via1: [[1.0, 1.0, 0.0], [1.0, 1.0, 0.0], 0.5]
       Via2: [[1.0, 1.0, 0.0], [1.0, 1.0, 0.0], 0.5]
       Via3: [[0.6, 0.0, 0.902], [0.6, 0.0, 0.902], 0.5]
       Via4: [[1.0, 1.0, 1.0], [1.0, 1.0, 1.0], 0.5]
       Via5: [[1.0, 1.0, 0.8], [1.0, 1.0, 0.8], 0.5]
+      Via6: [[1.0, 0.6, 0.0], [1.0, 0.6, 0.0], 0.5]
       __instance__: [black, none, 0.5]
       __instance_pin__: [grey, none, 0.5]
       prBoundary: [[0.6, 0.0, 0.902], [0.6, 0.0, 0.902], 0.5]
@@ -2216,6 +2359,11 @@ export:
       - Metal5
       - M5
       - Via5
+      - Metal6
+      - M6
+      - Via6
+      - Metal7
+      - M7
     show: false
 templates:
   gpdk045_microtemplates_dense:
@@ -3558,6 +3706,16 @@ templates:
       - - 0
         - 0
     via_M5_M6_0:
+      pins: {}
+      unit_size:
+      - 0
+      - 0
+      xy:
+      - - 0
+        - 0
+      - - 0
+        - 0
+    via_M6_M7_0:
       pins: {}
       unit_size:
       - 0
