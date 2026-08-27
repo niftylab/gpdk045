@@ -17,6 +17,40 @@ database:
   class: "bag.interface.skill.ADELSkillInterface"
   # default directory to create generated libraries in.
   default_lib_path: "${BAG_WORK_DIR}/gen_libs"
+  # Concrete-CDL policy used by LVCDL schematic-source generation.
+  # BAG_prim bodies follow the OA sources under
+  # gpdk045/DesignModules/BAG_prim/netlist_info (nmos4_fast wraps
+  # gpdk045/nmos1v_lvt, nmos4_standard wraps gpdk045/nmos1v).
+  cdl:
+    template_root: ""
+    strict: true
+    output:
+      extension: ".sp"
+      primitive_wrappers:
+        BAG_prim/nmos4_fast:
+          terminals: [B, D, G, S]
+          parameters: {l: 45n, w: 360n, nf: 1}
+          body: "MM0 D G S B nmos1v_lvt l=l w=w m=1*nf"
+        BAG_prim/pmos4_fast:
+          terminals: [B, D, G, S]
+          parameters: {l: 45n, w: 360n, nf: 1}
+          body: "MM0 D G S B pmos1v_lvt l=l w=w m=1*nf"
+        BAG_prim/nmos4_lvt:
+          terminals: [B, D, G, S]
+          parameters: {l: 45n, w: 360n, nf: 1}
+          body: "MM0 D G S B nmos1v_lvt l=l w=w m=1*nf"
+        BAG_prim/pmos4_lvt:
+          terminals: [B, D, G, S]
+          parameters: {l: 45n, w: 360n, nf: 1}
+          body: "MM0 D G S B pmos1v_lvt l=l w=w m=1*nf"
+        BAG_prim/nmos4_standard:
+          terminals: [B, D, G, S]
+          parameters: {l: 45n, w: 360n, nf: 1}
+          body: "MM0 D G S B nmos1v l=l w=w m=1*nf"
+        BAG_prim/pmos4_standard:
+          terminals: [B, D, G, S]
+          parameters: {l: 45n, w: 360n, nf: 1}
+          body: "MM0 D G S B pmos1v l=l w=w m=1*nf"
   # configurations for schematic import and generation
   schematic:
     # technology library to configure new libraries with
@@ -136,3 +170,10 @@ lib_defs: "bag_libs.def"
 
 # place to put new design libraries
 new_lib_path: "BagModules"
+
+# LVCDL dependency providers: libraries whose concrete CDL must be generated
+# on demand when another generator's cells instantiate them.
+lvcdl:
+  source_generators:
+    logic_generated:
+      callable: "laygo2_generators_private.lvcdl_runner:generate_logic_source"
