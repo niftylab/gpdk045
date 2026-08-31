@@ -954,53 +954,6 @@ grids:
       via:
         map:
         - - via_M3_M4_0
-    routing_34_basic_thick:
-      horizontal:
-        elements:
-        - 0
-        extension:
-        - 120
-        extension0:
-        - 480
-        layer:
-        - - Metal4
-          - drawing
-        pin_layer:
-        - - Metal4
-          - pin
-        scope:
-        - 0
-        - 1000
-        width:
-        - 240
-        ycolor:
-        - not MPT
-      primary_grid: horizontal
-      type: routing
-      vertical:
-        elements:
-        - 0
-        extension:
-        - 40
-        extension0:
-        - 160
-        layer:
-        - - Metal3
-          - drawing
-        pin_layer:
-        - - Metal3
-          - pin
-        scope:
-        - 0
-        - 205
-        width:
-        - 80
-        xcolor:
-        - not MPT
-      via:
-        map:
-        - - via_M3_M4_1
-          - via_M3_M4_1
     routing_34_thick:
       horizontal:
         elements:
@@ -1730,29 +1683,6 @@ grids:
           - via_M4_M5_2
           - via_M4_M5_2
           - via_M4_M5_2
-    routing_56_basic:
-      horizontal:
-        elements: [0]
-        extension: [40]
-        extension0: [160]
-        layer: [[Metal6, drawing]]
-        pin_layer: [[Metal6, pin]]
-        scope: [0, 200]
-        width: [80]
-        ycolor: [not MPT]
-      primary_grid: horizontal
-      type: routing
-      vertical:
-        elements: [0]
-        extension: [40]
-        extension0: [160]
-        layer: [[Metal5, drawing]]
-        pin_layer: [[Metal5, pin]]
-        scope: [0, 205]
-        width: [80]
-        xcolor: [not MPT]
-      via:
-        map: [[via_M5_M6_0]]
     routing_56_cmos:
       horizontal:
         elements: [200, 350, 500, 650, 800, 1200, 1350, 1500, 1650, 1800]
@@ -1800,29 +1730,6 @@ grids:
         - [via_M5_M6_0, via_M5_M6_0, via_M5_M6_0, via_M5_M6_0,
            via_M5_M6_0, via_M5_M6_0, via_M5_M6_0, via_M5_M6_0,
            via_M5_M6_0, via_M5_M6_0]
-    routing_67_basic:
-      horizontal:
-        elements: [0]
-        extension: [40]
-        extension0: [160]
-        layer: [[Metal6, drawing]]
-        pin_layer: [[Metal6, pin]]
-        scope: [0, 200]
-        width: [80]
-        ycolor: [not MPT]
-      primary_grid: horizontal
-      type: routing
-      vertical:
-        elements: [0]
-        extension: [40]
-        extension0: [160]
-        layer: [[Metal7, drawing]]
-        pin_layer: [[Metal7, pin]]
-        scope: [0, 205]
-        width: [80]
-        xcolor: [not MPT]
-      via:
-        map: [[via_M6_M7_0]]
     routing_67_cmos:
       horizontal:
         elements: [200, 350, 500, 650, 800, 1200, 1350, 1500, 1650, 1800]
