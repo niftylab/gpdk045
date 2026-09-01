@@ -2,6 +2,7 @@
 # Initialization. Taeho Shin. 07-26-2023
 # Colormap import method added. Taeho Shin. 10-17-2023
 # Importing functions are separated. Taeho Shin. 10-23-2023
+# Coordinate and layer access follow the laygo3 accessor API. 09-02-2026
 
 import numpy as np
 import yaml
@@ -93,7 +94,7 @@ def import_grids(grid_libname=grid_libname, placementgrid_prefix="placement",
                     yscope = [int(bnd[0][1]), int(bnd[1][1])]
                 else: # routing layers
                     if rect.width <= rect.height: # xgrid
-                        xelem.append(int(rect.center[0]))
+                        xelem.append(int(rect.center.xy[0]))
                         xwidth.append(int(rect.width))
                         xlayer.append(rect.layer)
                         xcolor.append(rect.color if rect.color != None else "not MPT")
@@ -108,7 +109,7 @@ def import_grids(grid_libname=grid_libname, placementgrid_prefix="placement",
                             xext0.append(int(rect.width*2))
 
                     else: # ygrid
-                        yelem.append(int(rect.center[1]))
+                        yelem.append(int(rect.center.xy[1]))
                         ywidth.append(int(rect.height))
                         ylayer.append(rect.layer)
                         ycolor.append(rect.color if rect.color != None else "not MPT")
@@ -171,8 +172,8 @@ def import_grids(grid_libname=grid_libname, placementgrid_prefix="placement",
             gdict['via'] = dict()
             viamap = dict()
             for via in cell.instances.values(): 
-                if via.cellname not in viamap: viamap[via.cellname] = via.center
-                else: viamap[via.cellname] = np.vstack((viamap[via.cellname], via.center))
+                if via.cellname not in viamap: viamap[via.cellname] = via.center.xy
+                else: viamap[via.cellname] = np.vstack((viamap[via.cellname], via.center.xy))
 
             for name, loc in viamap.items():
                 if not loc.ndim==1:
@@ -249,7 +250,7 @@ def import_templates(template_libname=template_libname, cellname=None, save_rect
             for pin in cell.pins.values():
                 tdict['pins'][pin.name] = dict()
                 tdict['pins'][pin.name]['netname'] = pin.netname
-                tdict['pins'][pin.name]['layer']   = pin.layer.tolist()
+                tdict['pins'][pin.name]['layer']   = list(pin.layer)
                 tdict['pins'][pin.name]['xy']      = pin.bbox.tolist()
             if not tdict.get("xy"):
                 tdict['xy'] = [[0,0],[0,0]]
